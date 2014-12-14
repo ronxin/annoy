@@ -174,7 +174,7 @@ class IndexTest(unittest.TestCase):
 
     def test_binary_compatibility(self):
         i = AnnoyIndex(10)
-        i.load('test/test.tree')
+        i.load('test.tree')
 
         # This might change in the future if we change the search algorithm, but in that case let's update the test
         self.assertEquals(i.get_nns_by_item(0, 10), [0, 85, 42, 11, 54, 38, 53, 66, 19, 31])
